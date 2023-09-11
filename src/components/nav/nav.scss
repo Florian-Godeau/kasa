@@ -1,14 +1,28 @@
 @import "../../styles/utils/variable.scss";
+@import "../../styles/utils/mixin.scss";
 
 .nav {
     display: flex;
     gap: 57px;
+    
+    @include phone {
+      gap: 10px;
+    }
   
     &__link {
       text-decoration: none;
       color: $color-secondary;
       font-weight: 500;
       font-size: 24px;
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include phone {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
   
       &.active {
         text-decoration: underline;

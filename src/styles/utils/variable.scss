@@ -1,9 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import "../../styles/utils/mixin.scss";
+
+
 /* Colors */
 $color-primary: #FFFFFF;
 $color-secondary: #FF6060;
 $color-tertiary: black;
 
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
 body {
-    padding: 45px 100px 0px 100px;
-    margin: 0 auto;
+    margin: 45px auto 0;
+    width: 90%;
+
+    @include phone {
+        margin: 20px auto 0;
+    }
 }

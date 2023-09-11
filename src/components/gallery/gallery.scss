@@ -1,0 +1,25 @@
+@import "../../styles/utils/variable.scss";
+@import "../../styles/utils/mixin.scss";
+
+.gallery {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+
+    @include tablet {
+        grid-template-columns: auto auto;
+    }
+
+    @include phone {
+        background-color: initial;
+        border-radius: 0;
+        grid-template-columns: auto;
+        padding: 0;
+    }
+  }

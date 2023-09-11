@@ -1,0 +1,27 @@
+@import "../../styles/utils/variable.scss";
+@import "../../styles/utils/mixin.scss";
+
+.footer {
+    position: relative;
+    left: -100px;
+    background-color: $color-tertiary;
+    width: 100vw;
+    height: 209px;
+
+    &__logo {
+        width: 122px;
+        height: 39.44px;
+        padding-top: 66px;
+        display: flex;
+        margin: auto;  
+    }
+
+    &__txt {
+        font-weight: 500;
+        font-size: 24px;
+        color: $color-primary;
+        display: flex;
+        justify-content: center;
+        padding-top: 46px;
+    }
+}

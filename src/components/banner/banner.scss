@@ -1,19 +1,48 @@
 @import "../../styles/utils/variable.scss";
+@import "../../styles/utils/mixin.scss";
 
 .banner {
     position: relative;
     margin-top: 50px;
+
+    @include phone {
+        margin-top: 27px;
+    }
 
     &__img {
         width: 100%;
         height: 223px;
         border-radius: 25px;
         object-fit: cover;
+
+        @include tablet {
+            height: 160px;
+        }
+
+        @include phone {
+            height: 111px;
+            border-radius:10px;
+        }
     }
 
     &__overlay {
-        height: 111px;
-        border-radius: 10px;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 223px;
+        border-radius: 25px;
+        background-color: rgba(darken($color-tertiary, 30%), 0.3);
+
+        @include tablet {
+            height: 160px;
+        }
+
+        @include phone {
+            height: 111px;
+            border-radius:10px;
+        }
     }
 
     &__txt {
@@ -30,5 +59,11 @@
         color: $color-primary;
         font-weight: 500;
         font-size: 48px;
+
+        @include phone {
+            font-size: 24px;
+            justify-content: start;
+            padding-left: 16px;
+        }
     }
 }
