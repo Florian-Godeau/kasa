@@ -1,4 +1,4 @@
-import "../styles/style.css";
+import "./nav.scss";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {

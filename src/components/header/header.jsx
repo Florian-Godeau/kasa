@@ -1,6 +1,6 @@
-import "../styles/style.css";
-import Logo from "../assets/logo-kasa-header.png";
-import Nav from "./nav";
+import "./header.scss";
+import Logo from "../../assets/logo-kasa-header.png";
+import Nav from "../nav/nav";
 
 export default function Header() {
     return (

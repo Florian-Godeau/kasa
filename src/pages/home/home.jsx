@@ -1,5 +1,5 @@
-import Header from "../components/header";
-import Banner from "../components/banner";
+import Header from "../../components/header/header";
+import Banner from "../../components/banner/banner";
 
 export default function Home() {
   return (
