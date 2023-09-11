@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    gap: 57px;
+  
+    &__link {
+      text-decoration: none;
+      color: $color-secondary;
+      font-weight: 500;
+      font-size: 24px;
+  
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
