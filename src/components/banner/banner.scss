@@ -60,10 +60,15 @@
         font-weight: 500;
         font-size: 48px;
 
+        @include tablet {
+            font-size: 32px;
+        }
+
         @include phone {
             font-size: 24px;
-            justify-content: start;
             padding-left: 16px;
+            align-items: start;
+            flex-direction: column;
         }
     }
 }

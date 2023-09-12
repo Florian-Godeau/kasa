@@ -6,16 +6,3 @@
 $color-primary: #FFFFFF;
 $color-secondary: #FF6060;
 $color-tertiary: black;
-
-* {
-    font-family: "Montserrat", sans-serif;
-}
-
-body {
-    margin: 45px auto 0;
-    width: 90%;
-
-    @include phone {
-        margin: 20px auto 0;
-    }
-}

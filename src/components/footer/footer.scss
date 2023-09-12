@@ -6,7 +6,15 @@
     left: -100px;
     background-color: $color-tertiary;
     width: 100vw;
-    height: 209px;
+    height: 230px;
+
+    @include tablet {
+        left: -50px;
+    }
+
+    @include phone {
+        left: -20px;
+    }
 
     &__logo {
         width: 122px;
@@ -22,6 +30,17 @@
         color: $color-primary;
         display: flex;
         justify-content: center;
-        padding-top: 46px;
+        padding-top: 28px;
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include phone {
+            font-size: 12px;
+            padding-top: 20px;
+            width: 97px;
+            margin: auto;
+        }
     }
 }
