@@ -12,11 +12,11 @@
     }
 
     &__open {
-        animation: marginBottomOpen 0.3s ease-in-out;
+		transition: margin-bottom 0.3s ease-in-out;
     }
 
     &__closed {
-        animation: marginBottomClosed 0.3s ease-in-out;
+        transition: margin-bottom 0.3s ease-in-out;
     }
 
     &__dropdown {
@@ -83,7 +83,6 @@
             &--hidden {
                 padding: 26.5px 0px 0px 8.5px;
                 color: $color-secondary;
-                animation: slideUp 0.2s ease-in-out;
                 font-weight: 400;
                 font-size: 18px;
                 opacity: 0;
@@ -98,23 +97,12 @@
 
 @keyframes slideDown {
     0% {
-        transform: translateY(-100%);
+        transform: margin-bottom(-100%);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: margin-bottom(0);
         opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
     }
 }
 
