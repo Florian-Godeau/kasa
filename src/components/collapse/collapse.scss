@@ -97,29 +97,11 @@
 
 @keyframes slideDown {
     0% {
-        transform: margin-bottom(-100%);
+        transform: translateY(-100%);
         opacity: 0;
     }
     100% {
-        transform: margin-bottom(0);
+        transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes marginBottomOpen {
-    0% {
-        margin-bottom: 0px;
-    }
-    100% {
-        margin-bottom: contentHeight;
-    }
-}
-
-@keyframes marginBottomClosed {
-    0% {
-        margin-bottom: contentHeight;
-    }
-    100% {
-        margin-bottom: 0px;
     }
 }

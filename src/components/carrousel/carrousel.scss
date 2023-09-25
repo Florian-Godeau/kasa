@@ -7,6 +7,11 @@
     height: 415px;
     margin-top: 50px;
 
+    @include phone {
+        height: 255px;
+        margin-top: 27px;
+    }
+
     &__img {
         width: 100%;
         height: 100%;
@@ -24,14 +29,28 @@
 
         &__prev {
             left: 23.36px;
+
+            @include phone {
+                left: 5.84px;
+            }
         }
 
         &__next {
             right: 23.36px;
+
+            @include phone {
+                right: 5.84px;
+            }
         }
 
         &--hidden {
             opacity: 0;
+        }
+
+        @include phone {
+            width: 11.67px;
+            height: 19.8px;
+            top: 117.6px;
         }
     }
 
@@ -45,5 +64,9 @@
         left: 50%;
         right: 50%;
         bottom: 24.92px;
+
+        @include phone {
+            display: none;
+        }
     }
 }

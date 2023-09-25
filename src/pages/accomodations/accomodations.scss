@@ -16,19 +16,46 @@
         font-weight: 500;
         width: fit-content;
         margin-top: 0;
+
+        @include phone {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            margin-right: 0px;
+        }
     }
 
         & h1 {
             font-size: 36px;
             line-height: 51.34px;
             margin-bottom: 5px;
+
+            @include phone {
+                font-size: 18px;
+                line-height: 25.67px;
+                margin-bottom: 5px;
+            }
         }
 
         & p {
             font-size: 18px;
             line-height: 25.67px;
             margin: 0;
+
+            @include phone {
+                font-size: 14px;
+                line-height: 19.96px;
+            }
         }
+
+    &__hostAndRating {
+        order: 3;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15.39px;
+        margin-bottom: 12.39px;
+    }
 
     &__host {
         order: 2;
@@ -40,18 +67,32 @@
         right: 0px;
         width: fit-content;
 
+        @include phone {
+            position: unset;
+        }
+
         & p {
             color: $color-secondary;
             font-weight: 500;
             font-size: 18px;
             line-height: 25.67px;
             text-align: end;
+
+            @include phone {
+                font-size: 12px;
+                line-height: 17.11px;
+            }
         }
 
         &__img {
             width: 64px;
             height: 64px;
             border-radius: 50%;
+
+            @include phone {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 
@@ -64,9 +105,19 @@
         right: 0px;
         width: fit-content;
 
+        @include phone {
+            position: unset;
+            gap: 6px;
+        }
+
         & img {
             width: 24.75px;
             height: 24px;
+
+            @include phone {
+                width: 13.41px;
+                height: 13px;
+            }
         }
     }
 
@@ -77,6 +128,11 @@
         flex-wrap: wrap;
         gap: 10px;
         width: fit-content;
+
+        @include phone {
+            margin-bottom: 0px;
+            order: 2;
+        }
 
         & span {
             display: flex;
@@ -91,6 +147,14 @@
             padding: 0px 10px;
             border-radius: 10px;
             background-color: $color-secondary;
+
+            @include phone {
+                font-size: 10px;
+                line-height: 14.26px;
+                height: 18px;
+                min-width: 74px;
+                padding: 0px 5px;
+            }
         }
     }
 
@@ -100,6 +164,12 @@
         display: flex;
         flex-direction: row;
         gap: 76px;
+
+        @include phone {
+            margin-bottom: 27px;
+            flex-direction: column;
+            gap: 20px;
+        }
 
         &__details {
             width: 100%;
