@@ -1,5 +1,5 @@
 import "./gallery.scss";
-import datas from "../../datas/accommodations.json";
+import datas from "../../datas/accomodations.json";
 import Card from "../cards/cards";
 
 export default function Gallery() {
