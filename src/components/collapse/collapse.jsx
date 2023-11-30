@@ -1,43 +1,44 @@
-import "./collapse.scss";
-import arrow from "../../assets/arrow.png";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react';
+import arrow from '../../assets/arrow.png'; // Assurez-vous que le chemin d'accès est correct
+import './collapse.scss';
 
-export default function Collapse({ title, content }) {
+const Collapse = ({ title, content }) => {
+  const [isActive, setIsActive] = useState(false);
+  const contentRef = useRef(null);
 
-    const [isOpen, setIsOpen] = useState(false);
-    const openContent = () => {
-        setIsOpen(!isOpen);
+  const toggleCollapse = () => {
+    setIsActive(!isActive);
+  };
+
+  useEffect(() => {
+    if (contentRef.current) {
+      if (isActive) {
+        contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+        contentRef.current.style.transform = 'translateY(0%)';
+      } else {
+        contentRef.current.style.height = '0px';
+        contentRef.current.style.transform = 'translateY(-100%)';
+      }
     }
+  }, [isActive]);
 
-    const contentRef = useRef(null);
-    const [contentHeight, setContentHeight] = useState('0px');
+  return (
+    <div className="collapse">
+      <div className="collapse-title" onClick={toggleCollapse}>
+        <h3>{title}</h3>
+        <img 
+          src={arrow} 
+          alt="Toggle" 
+          className={`collapse-arrow ${isActive ? 'active' : ''}`}
+        />
+      </div>
+      <div className="collapse-content" ref={contentRef}>
+        <div className="collapse-txt">
+          {content}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-    useEffect(() => {
-        if (isOpen) {
-            setContentHeight(`${contentRef.current.scrollHeight}px`);
-        } else {
-            setContentHeight('0px');
-        }
-    }, [isOpen]);
-
-    return (
-        <div className={`${isOpen ? 'collapse collapse__open' : 'collapse collapse__closed'}`} style={{ marginBottom: isOpen ? contentHeight : '0px' }}>
-            <div className="collapse__dropdown">
-                <h3 className="collapse__dropdown__title">
-                    {title}
-                    <img
-                        className={`collapse__dropdown__arrow ${isOpen ? 'collapse__dropdown__arrow--down' : 'collapse__dropdown__arrow--up'}`}
-                        onClick={openContent}
-                        src={arrow}
-                        alt="voir le contenu"
-                    />
-                </h3>
-                <div className={`${isOpen ? 'collapse__dropdown__txt--visible' : 'collapse__dropdown__txt--hidden'}`}
-                    ref={contentRef}
-                >
-                    {content}
-                </div>
-            </div>
-        </div >
-    );
-}
+export default Collapse;

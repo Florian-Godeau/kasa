@@ -53,8 +53,10 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        margin-top: 15.39px;
-        margin-bottom: 12.39px;
+
+        @include phone {
+            margin: 15px 0 15px 0;
+        }
     }
 
     &__host {
