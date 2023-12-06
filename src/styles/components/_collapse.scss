@@ -34,8 +34,6 @@
   .collapse-content {
     overflow: hidden;
     transition: height 0.3s ease, transform 0.3s ease;
-    height: 0; // Commencer avec une hauteur de 0
-    transform: translateY(-100%);
   }
   
   .collapse.active .collapse-content {
