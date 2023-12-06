@@ -1,17 +1,20 @@
 .collapse {
     background-color: #f6f6f6;
     color: $color-secondary;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     transition: height .1s ease-in-out;
+  }
+
+  h3 {
+    font-weight: 500;
   }
   
   .collapse-title {
     height: 52px;
     background-color: $color-secondary;
     color: $color-primary;
-    font-weight: 500;
     font-size: 24px;
     display: flex;
     flex-flow: row nowrap;
