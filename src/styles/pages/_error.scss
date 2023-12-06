@@ -1,0 +1,55 @@
+.error__content {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    color: $color-secondary;
+
+    @include phone {
+        gap: 60px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 288px;
+        margin: 0;
+
+        @include tablet {
+            font-size: 200px;
+        }
+
+        @include phone {
+            font-size: 96px;
+        }
+    }
+
+    &__txt {
+        font-weight: 500;
+        font-size: 36px;
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include phone {
+            font-size: 18px;
+        }
+    }
+
+    &__link {
+        color: $color-secondary;
+        font-weight: 500;
+        font-size: 18px;
+
+        @include tablet {
+            font-size: 16px;
+        }
+
+        @include phone {
+            font-size: 14px;
+        }
+    }
+}

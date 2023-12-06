@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // BrowserRouter utilise la gestion des URL du navigateur
-import Home from "./pages/home/home";
-import About from "./pages/about/about";
-import Accomodations from "./pages/accomodations/accomodations";
-import Error from "./pages/error/error";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Accomodations from "./pages/Accomodations";
+import Error from "./pages/Error";
 
 function Router() {
   return (

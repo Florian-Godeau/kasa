@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 210.32px;
+        height: 68px; 
+
+        @include tablet {
+            height: 58px;
+            width: 180px;
+        }
+
+        @include phone {
+            height: 46.88px;
+            width: 145px;
+        }
+    }
+}
+
+.header h1 {
+    margin: 0;
+}
